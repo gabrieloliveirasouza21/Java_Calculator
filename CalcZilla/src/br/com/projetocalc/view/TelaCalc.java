@@ -4,6 +4,8 @@
  */
 package br.com.projetocalc.view;
 import br.com.projetocalc.model.CalculadoraModel;
+import java.io.FileWriter;
+import java.time.LocalDate;
 
 /**
  *
@@ -221,6 +223,11 @@ public class TelaCalc extends javax.swing.JFrame {
         jButtonDarkLight.setText("D/L");
 
         jButtonHistorico.setText("H");
+        jButtonHistorico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHistoricoActionPerformed(evt);
+            }
+        });
 
         jButtonPotencia.setText("x²");
         jButtonPotencia.addActionListener(new java.awt.event.ActionListener() {
@@ -498,6 +505,29 @@ public class TelaCalc extends javax.swing.JFrame {
       jTextAreaTelaOperacoes.setText(calculo.getNum1() + " R ");
       //jTextAreaTelaOperacoes.setText(jTextAreaTelaOperacoes.getText() + "\n");
     }//GEN-LAST:event_jButtonRaizActionPerformed
+
+    private void jButtonHistoricoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHistoricoActionPerformed
+        // TODO add your handling code here:
+        try {
+            
+                FileWriter escritor = new FileWriter("Historico de Números.txt",true);
+                LocalDate data = LocalDate.now();
+                escritor.write("==========Histórico de Operações==========\n");
+            
+                //escritor.append é para adicionar Strings,variaveis ou textos no final.
+                 escritor.write("=========="+data+"==========\n");
+                 escritor.write(jTextAreaTelaOperacoes.getText()+"\n");
+                 escritor.close();
+            
+        } catch (Exception e) {
+          
+           
+            e.printStackTrace();
+   
+       
+        }
+        
+    }//GEN-LAST:event_jButtonHistoricoActionPerformed
 
     /**
      * @param args the command line arguments
