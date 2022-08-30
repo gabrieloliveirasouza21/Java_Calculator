@@ -402,6 +402,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="H"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHistoricoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonPotencia">
           <Properties>
