@@ -521,16 +521,11 @@ public class TelaCalc extends javax.swing.JFrame {
             
         } catch (Exception e) {
           
+           
             e.printStackTrace();
    
        
         }
-        
-        
-        
-        
-        
-        
         
     }//GEN-LAST:event_jButtonHistoricoActionPerformed
 
