@@ -86,6 +86,11 @@ public class TelaCalc extends javax.swing.JFrame {
 
         jButtonTrocaTroca.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButtonTrocaTroca.setText("+/=");
+        jButtonTrocaTroca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTrocaTrocaActionPerformed(evt);
+            }
+        });
 
         jButtonRaiz.setText("R");
         jButtonRaiz.addActionListener(new java.awt.event.ActionListener() {
@@ -459,6 +464,9 @@ public class TelaCalc extends javax.swing.JFrame {
         jTextAreaVisor.setText("");
         jTextAreaVisor.setText(calculo.calcular());
         jTextAreaTelaOperacoes.setText(jTextAreaTelaOperacoes.getText()+ " = " + calculo.getNumAux1() + "\n\n");
+        calculo.setMostrarResultado(calculo.getMostrarResultado()+ jTextAreaTelaOperacoes.getText()+ "\n");
+        
+        
     }//GEN-LAST:event_jButtonResultadoActionPerformed
 
     private void jButtonSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubtracaoActionPerformed
@@ -516,7 +524,7 @@ public class TelaCalc extends javax.swing.JFrame {
             
                 //escritor.append é para adicionar Strings,variaveis ou textos no final.
                  escritor.write("=========="+data+"==========\n");
-                 escritor.write(jTextAreaTelaOperacoes.getText()+"\n");
+                 escritor.write(calculo.getMostrarResultado()+"\n");
                  escritor.close();
             
         } catch (Exception e) {
@@ -528,6 +536,16 @@ public class TelaCalc extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButtonHistoricoActionPerformed
+
+    private void jButtonTrocaTrocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTrocaTrocaActionPerformed
+        // TODO add your handling code here:
+        
+           double numArea =  Double.valueOf(jTextAreaVisor.getText());
+           
+           numArea = numArea * (-1); 
+
+            jTextAreaVisor.setText(String.valueOf(numArea));
+    }//GEN-LAST:event_jButtonTrocaTrocaActionPerformed
 
     /**
      * @param args the command line arguments
