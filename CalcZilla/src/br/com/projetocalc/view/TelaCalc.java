@@ -25,7 +25,6 @@ public class TelaCalc extends javax.swing.JFrame {
         jTextAreaVisor.setEnabled(false);
         jTextAreaTelaOperacoes.setEnabled(false);
         setLocationRelativeTo(null);
-        jPanel1.setBackground(Color.white);
         
         
     }
@@ -86,13 +85,19 @@ public class TelaCalc extends javax.swing.JFrame {
         jTextAreaVisor.setRows(5);
         jScrollPane2.setViewportView(jTextAreaVisor);
 
-        jButtonTrocaTroca.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonTrocaTroca.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonTrocaTroca.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jButtonTrocaTroca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/maisIgual.png"))); // NOI18N
+        jButtonTrocaTroca.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonTrocaTroca.setMinimumSize(new java.awt.Dimension(26, 26));
+        jButtonTrocaTroca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTrocaTrocaActionPerformed(evt);
+            }
+        });
 
-        jButtonRaiz.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonRaiz.setForeground(new java.awt.Color(0, 0, 0));
         jButtonRaiz.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/raiz.png"))); // NOI18N
+        jButtonRaiz.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonRaiz.setMinimumSize(new java.awt.Dimension(26, 26));
         jButtonRaiz.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRaizActionPerformed(evt);
@@ -100,41 +105,37 @@ public class TelaCalc extends javax.swing.JFrame {
         });
 
         jButtonLimparNum.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/delete.png"))); // NOI18N
+        jButtonLimparNum.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonLimparNum.setMinimumSize(new java.awt.Dimension(26, 26));
         jButtonLimparNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonLimparNumActionPerformed(evt);
             }
         });
 
-        jButtonNum0.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum0.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonNum0.setText("0");
+        jButtonNum0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/zero.png"))); // NOI18N
         jButtonNum0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNum0ActionPerformed(evt);
             }
         });
 
-        jButtonVirgula.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonVirgula.setForeground(new java.awt.Color(0, 0, 0));
         jButtonVirgula.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/comma.png"))); // NOI18N
+        jButtonVirgula.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonVirgula.setMinimumSize(new java.awt.Dimension(26, 26));
         jButtonVirgula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonVirgulaActionPerformed(evt);
             }
         });
 
-        jButtonResultado.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonResultado.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonResultado.setText("=");
+        jButtonResultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/equal.png"))); // NOI18N
         jButtonResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonResultadoActionPerformed(evt);
             }
         });
 
-        jButtonDivisao.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonDivisao.setForeground(new java.awt.Color(0, 0, 0));
         jButtonDivisao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/divisao.png"))); // NOI18N
         jButtonDivisao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,8 +143,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonNum3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum3.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-3.png"))); // NOI18N
         jButtonNum3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,8 +150,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonNum2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum2.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-2.png"))); // NOI18N
         jButtonNum2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,8 +157,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonNum1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum1.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-one.png"))); // NOI18N
         jButtonNum1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,8 +164,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonMultiplicacao.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonMultiplicacao.setForeground(new java.awt.Color(0, 0, 0));
         jButtonMultiplicacao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/multiplicacao.png"))); // NOI18N
         jButtonMultiplicacao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,18 +171,13 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonSubtracao.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonSubtracao.setForeground(new java.awt.Color(0, 0, 0));
         jButtonSubtracao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/menos.png"))); // NOI18N
-        jButtonSubtracao.setToolTipText("");
         jButtonSubtracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSubtracaoActionPerformed(evt);
             }
         });
 
-        jButtonNum6.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum6.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/six.png"))); // NOI18N
         jButtonNum6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -197,8 +185,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonNum5.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum5.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-5.png"))); // NOI18N
         jButtonNum5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,8 +192,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonNum4.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum4.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-four.png"))); // NOI18N
         jButtonNum4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -215,8 +199,6 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonAdicao.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonAdicao.setForeground(new java.awt.Color(0, 0, 0));
         jButtonAdicao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/mais.png"))); // NOI18N
         jButtonAdicao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,26 +206,23 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonLimparTudo.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonLimparTudo.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonLimparTudo.setText("AC");
+        jButtonLimparTudo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/bin.png"))); // NOI18N
+        jButtonLimparTudo.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonLimparTudo.setMinimumSize(new java.awt.Dimension(26, 26));
+        jButtonLimparTudo.setPreferredSize(new java.awt.Dimension(22, 22));
         jButtonLimparTudo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonLimparTudoActionPerformed(evt);
             }
         });
 
-        jButtonNum9.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum9.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonNum9.setText("9");
+        jButtonNum9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-9.png"))); // NOI18N
         jButtonNum9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNum9ActionPerformed(evt);
             }
         });
 
-        jButtonNum8.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum8.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNum8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/number-8.png"))); // NOI18N
         jButtonNum8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,9 +230,7 @@ public class TelaCalc extends javax.swing.JFrame {
             }
         });
 
-        jButtonNum7.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonNum7.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonNum7.setText("7");
+        jButtonNum7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/Numeros/seven.png"))); // NOI18N
         jButtonNum7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonNum7ActionPerformed(evt);
@@ -261,15 +238,18 @@ public class TelaCalc extends javax.swing.JFrame {
         });
 
         jButtonHistorico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/HISTORY.png"))); // NOI18N
+        jButtonHistorico.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonHistorico.setMinimumSize(new java.awt.Dimension(26, 26));
         jButtonHistorico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonHistoricoActionPerformed(evt);
             }
         });
 
-        jButtonPotencia.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jButtonPotencia.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonPotencia.setText("x²");
+        jButtonPotencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/power.png"))); // NOI18N
+        jButtonPotencia.setMaximumSize(new java.awt.Dimension(26, 26));
+        jButtonPotencia.setMinimumSize(new java.awt.Dimension(26, 26));
+        jButtonPotencia.setPreferredSize(new java.awt.Dimension(22, 22));
         jButtonPotencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPotenciaActionPerformed(evt);
@@ -277,6 +257,9 @@ public class TelaCalc extends javax.swing.JFrame {
         });
 
         jbutDarkLight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/projetocalc/icon/day-night-sun-moon-cycle-pngrepo-com.png"))); // NOI18N
+        jbutDarkLight.setMaximumSize(new java.awt.Dimension(26, 26));
+        jbutDarkLight.setMinimumSize(new java.awt.Dimension(26, 26));
+        jbutDarkLight.setPreferredSize(new java.awt.Dimension(36, 36));
         jbutDarkLight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbutDarkLightActionPerformed(evt);
@@ -288,8 +271,35 @@ public class TelaCalc extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButtonNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonNum8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonLimparTudo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButtonNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonSubtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jbutDarkLight, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                            .addComponent(jButtonHistorico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -311,98 +321,71 @@ public class TelaCalc extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButtonAdicao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButtonNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonNum8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonLimparTudo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButtonNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonSubtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jButtonMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jButtonMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButtonHistorico, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                                .addComponent(jButtonResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jbutDarkLight, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+                        .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButtonLimparTudo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonNum9, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonNum8, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonPotencia, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonNum7, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButtonMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonSubtracao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jButtonPotencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jbutDarkLight, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButtonAdicao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jButtonNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButtonNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButtonNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButtonNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonMultiplicacao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonAdicao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButtonTrocaTroca, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonLimparNum, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonNum0, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButtonVirgula, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jbutDarkLight, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(56, 56, 56))
-                                    .addComponent(jButtonHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButtonResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(20, Short.MAX_VALUE))
+                            .addComponent(jButtonResultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -500,6 +483,9 @@ public class TelaCalc extends javax.swing.JFrame {
         jTextAreaVisor.setText("");
         jTextAreaVisor.setText(calculo.calcular());
         jTextAreaTelaOperacoes.setText(jTextAreaTelaOperacoes.getText()+ " = " + calculo.getNumAux1() + "\n\n");
+        calculo.setMostrarResultado(calculo.getMostrarResultado()+ jTextAreaTelaOperacoes.getText()+ "\n");
+        
+        
     }//GEN-LAST:event_jButtonResultadoActionPerformed
 
     private void jButtonSubtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubtracaoActionPerformed
@@ -557,7 +543,7 @@ public class TelaCalc extends javax.swing.JFrame {
             
                 //escritor.append é para adicionar Strings,variaveis ou textos no final.
                  escritor.write("=========="+data+"==========\n");
-                 escritor.write(jTextAreaTelaOperacoes.getText()+"\n");
+                 escritor.write(calculo.getMostrarResultado()+"\n");
                  escritor.close();
             
         } catch (Exception e) {
@@ -570,11 +556,21 @@ public class TelaCalc extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonHistoricoActionPerformed
 
+    private void jButtonTrocaTrocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTrocaTrocaActionPerformed
+        // TODO add your handling code here:
+        
+           double numArea =  Double.valueOf(jTextAreaVisor.getText());
+           
+           numArea = numArea * (-1); 
+
+            jTextAreaVisor.setText(String.valueOf(numArea));
+    }//GEN-LAST:event_jButtonTrocaTrocaActionPerformed
+
     private void jbutDarkLightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbutDarkLightActionPerformed
         // TODO add your handling code here:
-        //Color minhaCor = new Color(217, 228, 241);
         
         if (jbutDarkLight.isSelected()) {       
+        
         jPanel1.setBackground(Color.darkGray);
         
         jButtonNum0.setBackground(Color.gray);
@@ -634,12 +630,15 @@ public class TelaCalc extends javax.swing.JFrame {
         jButtonTrocaTroca.setBackground(Color.lightGray);
         jButtonResultado.setBackground(Color.lightGray);
         jButtonVirgula.setBackground(Color.lightGray);
+        }                                             
+    
+        
     }//GEN-LAST:event_jbutDarkLightActionPerformed
-    }
+
     /**
      * @param args the command line arguments
      */
-   public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

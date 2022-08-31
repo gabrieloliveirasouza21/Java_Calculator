@@ -16,7 +16,7 @@ public class CalculadoraModel {
     private String num2 = "";
     private double numAux1 = 0;
     private double numAux2 = 0;
-    //private String vet[] = new String[2];
+    private  String mostrarResultado = "";
     private int calculo = 0;
     
     //Métodos
@@ -33,6 +33,15 @@ public class CalculadoraModel {
     //Get+Set para num1 e num2
     //Set para numAux1, numAux2 e String vet[2]
 
+    public void setMostrarResultado(String mostrarResultado) {
+        this.mostrarResultado = mostrarResultado;
+    }
+
+    public String getMostrarResultado() {
+        return mostrarResultado;
+    }
+    
+    
     public void setCalculo(int calculo) {
         this.calculo = calculo;
     }
