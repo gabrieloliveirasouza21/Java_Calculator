@@ -5,6 +5,7 @@
 package br.com.projetocalc.model;
 
 import java.io.FileWriter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -124,7 +125,19 @@ public String calcular(){
          return String.valueOf(numAux1);
          
          case 4  :
-         numAux1= Double.parseDouble(num1)/Double.parseDouble(num2);
+             
+             try {
+                 if (Double.parseDouble(num2) != 0) {
+                     numAux1= Double.parseDouble(num1)/Double.parseDouble(num2);
+                 } else {
+                     JOptionPane.showMessageDialog(null, "Oops! não é possível dividir por 0...");
+                 }
+ 
+                
+         } catch (Exception e) {
+                 
+         }
+         
          return String.valueOf(numAux1);
 
          
@@ -140,6 +153,17 @@ public String calcular(){
             return String.valueOf(numAux1);
             
         }
+             
+             try {
+                 if(Double.valueOf(num1) >= 0){
+                 numAux1= Math.sqrt(Double.parseDouble(num1));    
+                 } else{
+                     JOptionPane.showMessageDialog(null, "Não existe raiz de número negativo.");
+                     
+                 }
+                 
+             } catch (Exception e) {
+             }
              numAux1= Math.sqrt(Double.parseDouble(num1));    
              return String.valueOf(numAux1);
 }
